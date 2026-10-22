@@ -2,8 +2,8 @@
 
 Static application home page and privacy policy for a personal rclone workflow that backs up selected files from an Oracle-hosted server to the owner's Google Drive using the intended `drive.file` scope.
 
-- Home: https://plx0.github.io/plx-server-backup/
-- Privacy: https://plx0.github.io/plx-server-backup/privacy.html
+- Home: https://plx-server-backup.duckdns.org/
+- Privacy: https://plx-server-backup.duckdns.org/privacy.html
 
 Publish with GitHub Pages from the root of `main`. No build step or third-party assets are required.
 
@@ -13,6 +13,14 @@ The privacy policy describes the intended personal configuration; the server, en
 
 ## Google Auth Platform
 
-Application home page and privacy policy URLs are above. The candidate authorized domain is `plx0.github.io` (no scheme or path), subject to Google's validation. Accepting a domain in that field does not verify its ownership. Do not register the shared `github.io` domain as if you own it.
+Project: `plx-backups` (PLX-Backups). Intended scope: `https://www.googleapis.com/auth/drive.file`.
 
-Google's brand/domain verification requirements must be checked separately. A Search Console URL-prefix verification is not necessarily sufficient for OAuth domain verification. If Google requires DNS-level Domain Property verification, use a domain you control and map it to GitHub Pages, verify it using the project's owner account, and update both URLs. Personal-use verification exceptions and the Audience publishing state are distinct from verified branding.
+- Application home page: https://plx-server-backup.duckdns.org/
+- Privacy policy: https://plx-server-backup.duckdns.org/privacy.html
+- Authorized domain: `plx-server-backup.duckdns.org`
+
+The free subdomain is managed through the owner's DuckDNS account. DNS-level ownership verification succeeded in Google Search Console on 22 October 2026 using the Google account associated with the Cloud project. Keep its public Google verification TXT record in DNS; no private DNS management token belongs in this repository.
+
+The app's Audience publishing state is **In production**. This state is separate from verified branding. Google may require up to 24 hours after ownership verification before a new branding check recognizes it. HTTPS readiness and Google's branding acceptance must be confirmed independently; neither follows merely from creating a domain or adding it to Authorized domains.
+
+DNS currently points to a GitHub Pages address. Do not run a dynamic IP updater for this domain: that would replace the website destination. If DNS or hosting changes, check the live HTTPS home and privacy URLs before changing OAuth branding.
