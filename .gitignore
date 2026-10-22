@@ -1,0 +1,7 @@
+# This repository is exclusively for public static documentation.
+*
+!.gitignore
+!.nojekyll
+!index.html
+!privacy.html
+!README.md
